@@ -1,5 +1,5 @@
 export function getMinecraftServerStatus(callback) {
-    fetch("server_status.json")
+    fetch("https://pqwhdog7ohjr4siqooioddkcg40vftnv.lambda-url.us-east-1.on.aws")
         .then(response => {
             return response.json();
         })
@@ -7,7 +7,7 @@ export function getMinecraftServerStatus(callback) {
             callback(json);
         })
         .catch(error => {
-            console.error("error geeting the server_status.json", error);
+            console.error("error geeting the server status", error);
         });
 }
 
